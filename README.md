@@ -1,27 +1,15 @@
-\# plugin-exemplo
+# plugin-mtcli-exemplo
 
-&nbsp; 
-
-Plugin do mtcli que adiciona o comando plugin de exemplo.
-
-&nbsp; 
+Plugin mtcli de exemplo.
 
 ---
 
-&nbsp; 
-
-\## Instalação
-
-&nbsp; 
+## Instalação
 
 ```cmd
-
-git clone git@github.com:vfranca/plugin-exemplo.git
-
-cd plugin-exemplo
-
+git clone git@github.com:vfranca/plugin-mtcli-exemplo.git
+cd plugin-mtcli-exemplo
 pip install .
-
 ```
 
 

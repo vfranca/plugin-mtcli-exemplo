@@ -1,31 +1,63 @@
-# Normaliza finais de linha para LF (Linux/macOS style)
+# ============================================================
+# Normalização de arquivos de texto
+# ============================================================
+
+* text=auto
+
 *.py text eol=lf
+*.pyi text eol=lf
+*.toml text eol=lf
 *.md text eol=lf
+*.rst text eol=lf
 *.txt text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
 *.json text eol=lf
 *.csv text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
 
-# Trata arquivos binários corretamente
+# ============================================================
+# Arquivos binários
+# ============================================================
+
 *.png binary
 *.jpg binary
 *.jpeg binary
 *.gif binary
+*.webp binary
 *.pdf binary
 *.ico binary
+*.exe binary
+*.dll binary
+*.so binary
+*.whl binary
+*.zip binary
 
-# Ignora arquivos minificados e de terceiros para análise de linguagem no GitHub
+# ============================================================
+# GitHub Linguist: arquivos de terceiros
+# ============================================================
+
 *.min.js linguist-vendored
 *.min.css linguist-vendored
-venv/* linguist-vendored
-docs/* linguist-documentation
 
-# Define arquivos lock como preferindo nossa versão em merges
-poetry.lock merge=ours
+venv/** linguist-vendored
+.venv/** linguist-vendored
 
-# Exclui arquivos gerados ou temporários de contagem de linguagens
-build/* linguist-generated
-dist/* linguist-generated
+# ============================================================
+# GitHub Linguist: documentação
+# ============================================================
+
+docs/** linguist-documentation
+
+# ============================================================
+# GitHub Linguist: arquivos gerados
+# ============================================================
+
+build/** linguist-generated
+dist/** linguist-generated
 *.pyc linguist-generated
-_pycache_/* linguist-generated
+__pycache__/** linguist-generated

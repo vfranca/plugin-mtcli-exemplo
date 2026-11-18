@@ -1,24 +1,26 @@
-# Hooks de qualidade do projeto mtcli.
+# Hooks de qualidade do projeto plugin-mtcli-exemplo.
 
 minimum_prek_version = "0.5.7"
 
+# Ferramentas locais de qualidade de código.
 [[repos]]
 repo = "local"
 
 [[repos.hooks]]
 id = "ruff-check"
 name = "Ruff check"
-entry = "poetry run ruff check"
+entry = "ruff check"
 language = "system"
 types = ["python"]
 
 [[repos.hooks]]
 id = "ruff-format"
 name = "Ruff format"
-entry = "poetry run ruff format --check"
+entry = "ruff format --check"
 language = "system"
 types = ["python"]
 
+# Hooks internos do prek.
 [[repos]]
 repo = "builtin"
 
